@@ -33,6 +33,11 @@ while True:
         print("Employee data inserted successfully.")
     elif(choice == 2):
         print("View employee")
+        sql = "SELECT * FROM `employees`"
+        mycursor.execute(sql)
+        result = mycursor.fetchall()
+        for i in result:
+            print(i)
     elif(choice == 3):
         print("Searching a employee")
     elif (choice == 4):
